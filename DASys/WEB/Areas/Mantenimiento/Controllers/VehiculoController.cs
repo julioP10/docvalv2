@@ -146,7 +146,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
         }
         #endregion
         [HttpPost]
-        public IActionResult Mantenimiento([FromForm] Vehiculo objVehiculo, IFormFile file)
+        public IActionResult Mantenimiento([FromForm] Vehiculo objVehiculo)
         {
             var jsonResponseDto = new JsonResponseDto();
             try
@@ -160,6 +160,10 @@ namespace WEB.Areas.Mantenimiento.Controllers
                 if (!string.IsNullOrWhiteSpace(objVehiculo.InicioContrato))
                 {
                     objVehiculo.InicioContrato = Convert.ToDateTime(objVehiculo.InicioContrato).ToString("yyyyMMdd");
+                }
+                if (GetPerfil().ToUpper() != "SUPERUSUARIO")
+                {
+                    objVehiculo.IdEmpresa = GetEmpresaPadre();
                 }
 
                 var response = _Vehiculo.MantenimientoVehiculo(objVehiculo);

@@ -335,7 +335,7 @@ var Empresa = function () {
 
                 }
                 else {
-                    $("#IdPadre").prop("required", true); 
+                    $("#IdPadre").prop("required", true);
                     $("#IdCategoria").prop("required", true);
                     $("#IdPadre").prop("disabled", false);
                     $("select[name = '__IdPadre']").prop("disabled", false);
@@ -384,7 +384,7 @@ var Empresa = function () {
                 if (_perfilLogeado === "SUPERUSUARIO" || _perfilLogeado === "ADMINISTRADOR") {
                     var Values = $(this).val();
                     var _empresaSelceccionada = null;
-                    if ($("#IdEmpresa").val()!=="") {
+                    if ($("#IdEmpresa").val() !== "") {
                         _empresaSelceccionada = $("#IdEmpresa").val();
                     }
                     var param = {
@@ -401,7 +401,7 @@ var Empresa = function () {
                             $('#IdPadre').append($('<option>', {
                                 value: e.value,
                                 text: e.nombre,
-                                padre:e.valor1
+                                padre: e.valor1
                             }));
                         });
                         $("#IdPadre").val(0);
@@ -442,38 +442,17 @@ var Empresa = function () {
             }
         },
         ruc: function (e) {
-            if ($("#IdEmpresa").val()=="") {
+            if ($("#IdEmpresa").val() === "") {
                 var _value = $(e).val();
                 if (_value.length >= 11) {
-                    $.post("https://cors-anywhere.herokuapp.com/wmtechnology.org/Consultar-RUC/?modo=1&btnBuscar=Buscar&nruc=" + _value, function (respuesta) {
-                        var doc = document.implementation.createHTMLDocument()
-                            .documentElement,
-                            res = "",
-                            txt, campos,
-                            ok = false;
 
-                        doc.innerHTML = respuesta;
-                        campos = doc.querySelectorAll(".list-group-item");
-                        if (campos.length) {
-                            for (txt of campos)
-                                res += txt.innerText + "\n";
-                            res = res.replace(/^\s+\n*|(:) *\n| +$/gm, "$1");
-                            ok = /^Estado: *ACTIVO *$/m.test(res);
-                            $("#content-empresa").css("display", "");
-                            $("#resultado").html(campos);
-                            $("#espacio .list-group-item-heading").css("margin-top", "0px");
-                            $("#espacio .list-group-item-heading").css("margin-bottom", "7px");
-                            $("#espacio .list-group-item-heading").css("font-size", "1em");
+                    webApp.JsonParam('/ConsultaSunat/ConsultaRuc', { ruc : _value }, function (response) {
 
-                            var arreglo = res.split(":");
-                            if (arreglo.length > 0) {
-                                var arregloRuc = arreglo[1].split("-");
-                                var nuevaCadena = arregloRuc[1].replace("Estado", "");
-                                $("#RazonSocial").val(nuevaCadena)
-                                $("#DireccionFiscal").val(arreglo[8])
-                                $("#espacio #RazonSocial").addClass('campo-lleno campo-focus').parent(":not(.form-group)").addClass('campo-lleno');
-                                $("#espacio #DireccionFiscal").addClass('campo-lleno campo-focus').parent(":not(.form-group)").addClass('campo-lleno');
-                            }
+                        if (response.data) {
+                            $("#RazonSocial").val(response.data.nombre);
+                            $("#DireccionFiscal").val(response.data.direccion);
+                            $("#espacio #RazonSocial").addClass('campo-lleno campo-focus').parent(":not(.form-group)").addClass('campo-lleno');
+                            $("#espacio #DireccionFiscal").addClass('campo-lleno campo-focus').parent(":not(.form-group)").addClass('campo-lleno');
                             correcto = 1;
                         } else {
                             res = "RUC: " + _value + "\nNo existe.";

@@ -16,3 +16,9 @@ C:\Users\PILLACA\Desktop\DASys\Entidad\obj\Debug\Entidad.csprojAssemblyReference
 C:\Users\PILLACA\Desktop\DASys\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\PILLACA\Desktop\DASys\Entidad\obj\Debug\Entidad.dll
 C:\Users\PILLACA\Desktop\DASys\Entidad\obj\Debug\Entidad.pdb
+D:\DASYS\docvalv2\DASys\Entidad\bin\Debug\Entidad.dll
+D:\DASYS\docvalv2\DASys\Entidad\bin\Debug\Entidad.pdb
+D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.csprojAssemblyReference.cache
+D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.dll
+D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.pdb

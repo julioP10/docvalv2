@@ -1,0 +1,308 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj": {}
+  },
+  "projects": {
+    "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj",
+        "projectName": "Acces",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj",
+        "projectName": "Datos",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+        "projectName": "Dependencia",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
+        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj",
+        "projectName": "Entidad",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
+        "projectName": "Interfaces",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
+        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
+        "projectName": "Utilis",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
+        "projectName": "WEB",
+        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
+        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
+        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "projectReferences": {
+              "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              },
+              "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
+                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "dependencies": {
+            "EPPlus.Core": {
+              "target": "Package",
+              "version": "[1.5.4, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.12, )"
+            },
+            "Microsoft.AspNetCore.All": {
+              "target": "Package",
+              "version": "[2.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Serilog.Sinks.RollingFile": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

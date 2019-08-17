@@ -41,6 +41,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
                 HttpContext.Session.SetString("_TipoEmpresa", _tipo);
             }
             objMaquinariaConsultaDto.IdEmpresaPrincipal = GetEmpresaPadre();
+            objMaquinariaConsultaDto.TipoEmpresa = GetTipoEmpresa();
             if (GetPerfil() == "SUPERUSUARIO")
             {
                 objMaquinariaConsultaDto.IdEmpresaPrincipal = "";
@@ -157,6 +158,10 @@ namespace WEB.Areas.Mantenimiento.Controllers
                 if (!string.IsNullOrWhiteSpace(objMaquinaria.InicioContrato))
                 {
                     objMaquinaria.InicioContrato = Convert.ToDateTime(objMaquinaria.InicioContrato).ToString("yyyyMMdd");
+                }
+
+                if (GetPerfil().ToUpper() !="SUPERUSUARIO") {
+                    objMaquinaria.IdEmpresa = GetEmpresaPadre();
                 }
 
                 var response = _Maquinaria.MantenimientoMaquinaria(objMaquinaria);
