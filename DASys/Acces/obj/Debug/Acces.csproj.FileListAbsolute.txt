@@ -216,3 +216,15 @@ C:\Users\PILLACA\Desktop\DASys\Acces\obj\Debug\Acces.csproj.CoreCompileInputs.ca
 C:\Users\PILLACA\Desktop\DASys\Acces\obj\Debug\Acces.csproj.CopyComplete
 C:\Users\PILLACA\Desktop\DASys\Acces\obj\Debug\Acces.dll
 C:\Users\PILLACA\Desktop\DASys\Acces\obj\Debug\Acces.pdb
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\Acces.dll
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\Acces.pdb
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\netstandard.dll
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\System.Collections.Immutable.dll
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\System.Reflection.Metadata.xml
+D:\DASYS\docvalv2\DASys\Acces\bin\Debug\System.Collections.Immutable.xml
+D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.csprojAssemblyReference.cache
+D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CoreCompileInputs.cache
+D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CopyComplete
+D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.dll
+D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.pdb

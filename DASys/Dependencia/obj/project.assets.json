@@ -95,7 +95,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -267,23 +267,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PILLACA\\.nuget\\packages\\": {},
+    "C:\\Users\\Win10 1809\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PILLACA\\Desktop\\DASys\\Dependencia\\Dependencia.csproj",
+      "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
       "projectName": "Dependencia",
-      "projectPath": "C:\\Users\\PILLACA\\Desktop\\DASys\\Dependencia\\Dependencia.csproj",
-      "packagesPath": "C:\\Users\\PILLACA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PILLACA\\Desktop\\DASys\\Dependencia\\obj\\",
+      "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+      "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
+      "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\PILLACA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -296,11 +296,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\PILLACA\\Desktop\\DASys\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\PILLACA\\Desktop\\DASys\\Datos\\Datos.csproj"
+            "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\PILLACA\\Desktop\\DASys\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\PILLACA\\Desktop\\DASys\\Interfaces\\Interfaces.csproj"
+            "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
             }
           }
         }

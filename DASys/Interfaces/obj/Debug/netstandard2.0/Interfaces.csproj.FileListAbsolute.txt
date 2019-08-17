@@ -34,3 +34,15 @@ C:\Users\PILLACA\Desktop\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.As
 C:\Users\PILLACA\Desktop\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CopyComplete
 C:\Users\PILLACA\Desktop\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
 C:\Users\PILLACA\Desktop\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb
+D:\DASYS\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.deps.json
+D:\DASYS\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.dll
+D:\DASYS\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.pdb
+D:\DASYS\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Entidad.dll
+D:\DASYS\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Entidad.pdb
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csprojAssemblyReference.cache
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfoInputs.cache
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CopyComplete
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
+D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb

@@ -28,7 +28,14 @@
                     <div class="col-md-4 col-md-offset-2">
                         <div class="anil_nepal">
                             <label class="switch switch-left-right">
-                                <input asp-for="IdEstado" checked class="switch-input" type="checkbox">
+                                @if (Model.IdEstado == "TRUE")
+                                {
+                                    <input asp-for="IdEstado" checked class="switch-input" type="checkbox">
+                                }
+                                else
+                                {
+                                    <input asp-for="IdEstado" class="switch-input" type="checkbox">
+                                }
                                 <span class="switch-label" data-on="SI" data-off="NO"></span> <span class="switch-handle"></span>
                             </label>
                             Estado

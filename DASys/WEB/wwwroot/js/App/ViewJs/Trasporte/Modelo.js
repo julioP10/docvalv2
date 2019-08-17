@@ -31,7 +31,7 @@ var Modelo = function () {
                 }));
             });
             if ($("#_IdMarca").val() !== undefined) {
-                if ($("#_IdMarca").val() != "0")
+                if ($("#_IdMarca").val() !== "0")
                     $('#IdMarca').val($("#_IdMarca").val());
             }
         });
@@ -57,7 +57,7 @@ var Modelo = function () {
                 }));
             });
             if ($("#_IdConfiguracion").val() !== undefined) {
-                if ($("#_IdConfiguracion").val() != "0")
+                if ($("#_IdConfiguracion").val() !== "0")
                     $('#IdConfiguracion').val($("#_IdConfiguracion").val());
             }
         });
@@ -78,7 +78,7 @@ var Modelo = function () {
                         //
                         request.filter = {
                             NombreSearch: $("#NombreSearch").val()
-                        }
+                        };
                     },
                     dataFilter: function (data) {
                         if (data.substring(0, 9) === "<!DOCTYPE") {
@@ -102,9 +102,7 @@ var Modelo = function () {
                             return '<a href="javascript:void(0)" class="btnEditarModelo"  data-id="' + obj.idModelo + '">' + obj.nombre + '</a>';
                         }
                     },
-                    { "data": "sdk" },
                     { "data": "marca" },
-                    { "data": "configuracion" },
                     { "data": "estado" },
                     {
                         "data": function (obj) {
@@ -129,9 +127,7 @@ var Modelo = function () {
                     { "className": "dt-body-center", "aTargets": [2], "width": "30%" },
                     { "className": "dt-body-center", "aTargets": [3], "width": "10%" },
                     { "className": "dt-body-center", "aTargets": [4], "width": "10%" },
-                    { "className": "dt-body-center", "aTargets": [5], "width": "10%" },
-                    { "className": "dt-body-center", "aTargets": [6], "width": "10%" },
-                    { "bSortable": false, "className": "datatable-td-opciones", "aTargets": [7], "width": "1%" }
+                    { "bSortable": false, "className": "datatable-td-opciones", "aTargets": [5], "width": "1%" }
                 ],
                 "order": [[1, "desc"]],
                 "initComplete": function (settings, json) {
@@ -160,9 +156,9 @@ var Modelo = function () {
                 
                 var query = $(form).serialize();
                 var ModeloMensaje = $("#IdModelo").val();
-                var msj = ((ModeloMensaje == '' || ModeloMensaje == null) ? mensajeRegistro : mensajeActualizar);
-                var titlemsj = ((ModeloMensaje == '' || ModeloMensaje == null) ? tituloRegistro: tituloActualizar);
-                var typemsj = ((ModeloMensaje == '' || ModeloMensaje == null) ? typeRegistro : typeActualizar);
+                var msj = ((ModeloMensaje === '' || ModeloMensaje === null) ? mensajeRegistro : mensajeActualizar);
+                var titlemsj = ((ModeloMensaje === '' || ModeloMensaje === null) ? tituloRegistro: tituloActualizar);
+                var typemsj = ((ModeloMensaje === '' || ModeloMensaje === null) ? typeRegistro : typeActualizar);
                 var mensaje = {
                     title: titlemsj,
                     text: msj,
@@ -171,7 +167,7 @@ var Modelo = function () {
                 };
                 webApp.sweetajax(mensaje, { url: urlMantenimientoModelo, parametros: query }
                     , function (jsonResponse) {
-                        if (jsonResponse.type == "success") {
+                        if (jsonResponse.type === "success") {
                             webApp.sweetresponseOk(mensaje.title, jsonResponse, urlModeloIndex);
                         } else {
                             webApp.sweetmensaje(mensaje.title, jsonResponse.mensaje, jsonResponse.type);
@@ -192,7 +188,7 @@ var Modelo = function () {
             };
             webApp.sweetajax(mensaje, { url: urlEliminarModelo, parametros: query }
                 , function (jsonResponse) {
-                    if (jsonResponse.type == "success") {
+                    if (jsonResponse.type === "success") {
                         webApp.sweetmensaje("Modelo", jsonResponse.mensaje, jsonResponse.type);
                         dataTableModelo.fnReloadAjax();
                     } else {
@@ -205,14 +201,14 @@ var Modelo = function () {
 
         $(Modelo_CTL).on("change", "input#IdEstado", function () {
             var _accion = $("#Accion").val();
-            if (_accion != undefined) {
-                if ($(this).is(":checked") == false) {
+            if (_accion !== undefined) {
+                if ($(this).is(":checked") === false) {
                     var query = {
                         IdModelo: $("#IdModelo").val(),
                         Accion: _accion
                     };
                     webApp.JsonParam(urlEliminarModelo, query, function (jsonResponseDto) {
-                        if (jsonResponseDto.mensaje != "ok") {
+                        if (jsonResponseDto.mensaje !== "ok") {
                             webApp.sweetmensaje("Modelo", jsonResponseDto.mensaje, "warning");
                             $("#IdEstado").prop("checked", true);
                         }
@@ -287,7 +283,7 @@ var Modelo = function () {
                 dataTableModeloView(urlModeloPaginado);
             });
             webApp.ValidarFormatoFechaDDMMYYYY('FechaInicio', 'FechaFin');
-            if (!(__Perfil == "SUPERUSUARIO" || __Perfil == "Administrador")) {
+            if (!(__Perfil === "SUPERUSUARIO" || __Perfil === "Administrador")) {
                 $("#btnMarcaRegistro").remove();
             }
         },

@@ -78,7 +78,7 @@ var Modelo = function () {
                         //
                         request.filter = {
                             NombreSearch: $("#NombreSearch").val()
-                        }
+                        };
                     },
                     dataFilter: function (data) {
                         if (data.substring(0, 9) === "<!DOCTYPE") {
