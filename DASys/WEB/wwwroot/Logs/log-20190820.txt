@@ -1,0 +1,313 @@
+2019-08-20 11:28:15.188 -05:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:50338/  0
+2019-08-20 11:28:15.188 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/  
+2019-08-20 11:28:15.741 -05:00 [Information] Request finished in 789.9443ms 200 
+2019-08-20 11:28:17.557 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 11:28:24.660 -05:00 [Information] Could break here :(
+2019-08-20 11:28:57.771 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 40517.5173ms
+2019-08-20 11:28:58.260 -05:00 [Error] An unhandled exception has occurred while executing the request
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Datos.SQLHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType cmdType, String cmdText, SqlParameter[] commandParameters) in D:\repo personal\docvalv2\DASys\Datos\Helper\SQLHelper.cs:line 94
+   at Datos.SQLHelper.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) in D:\repo personal\docvalv2\DASys\Datos\Helper\SQLHelper.cs:line 39
+   at Datos.UtilsDAL.IniciarSistema() in D:\repo personal\docvalv2\DASys\Datos\Utils\UtilsDAL.cs:line 22
+   at Utilis.Utils.IniciarSistema() in D:\repo personal\docvalv2\DASys\Utilis\Utils.cs:line 15
+   at WEB.Controllers.LoginController.Index() in D:\repo personal\docvalv2\DASys\WEB\Controllers\LoginController.cs:line 47
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2019-08-20 11:28:58.753 -05:00 [Information] Request finished in 43691.0287ms 500 text/html; charset=utf-8
+2019-08-20 11:28:59.271 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/favicon.ico  
+2019-08-20 11:28:59.305 -05:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\favicon.ico"'
+2019-08-20 11:28:59.383 -05:00 [Information] Request finished in 105.5047ms 200 image/x-icon
+2019-08-20 12:21:47.406 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/  
+2019-08-20 12:21:47.406 -05:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:50338/  0
+2019-08-20 12:21:47.972 -05:00 [Information] Request finished in 675.5466ms 200 
+2019-08-20 12:21:49.954 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:22:10.874 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 21333.6801ms
+2019-08-20 12:22:11.296 -05:00 [Error] An unhandled exception has occurred while executing the request
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Datos.SQLHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType cmdType, String cmdText, SqlParameter[] commandParameters) in D:\repo personal\docvalv2\DASys\Datos\Helper\SQLHelper.cs:line 94
+   at Datos.SQLHelper.ExecuteNonQuery(SqlConnection conn, CommandType cmdType, String cmdText, SqlParameter[] cmdParms) in D:\repo personal\docvalv2\DASys\Datos\Helper\SQLHelper.cs:line 39
+   at Datos.UtilsDAL.IniciarSistema() in D:\repo personal\docvalv2\DASys\Datos\Utils\UtilsDAL.cs:line 22
+   at Utilis.Utils.IniciarSistema() in D:\repo personal\docvalv2\DASys\Utilis\Utils.cs:line 15
+   at WEB.Controllers.LoginController.Index() in D:\repo personal\docvalv2\DASys\WEB\Controllers\LoginController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2019-08-20 12:22:11.980 -05:00 [Information] Request finished in 24734.2628ms 500 text/html; charset=utf-8
+2019-08-20 12:26:22.645 -05:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:50338/  0
+2019-08-20 12:26:22.645 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/  
+2019-08-20 12:26:23.222 -05:00 [Information] Request finished in 635.5715ms 200 
+2019-08-20 12:26:24.943 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:41.804 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:41.840 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:41.878 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 17397.365ms
+2019-08-20 12:26:41.929 -05:00 [Information] Request finished in 19501.6527ms 302 
+2019-08-20 12:26:41.986 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:42.051 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:42.303 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:42.316 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 304.8326ms
+2019-08-20 12:26:42.335 -05:00 [Information] Request finished in 346.2219ms 302 
+2019-08-20 12:26:42.349 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:42.417 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:42.610 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:42.624 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:42.637 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 273.6681ms
+2019-08-20 12:26:42.655 -05:00 [Information] Request finished in 307.7314ms 302 
+2019-08-20 12:26:42.668 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:42.715 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:42.835 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:42.846 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 165.8223ms
+2019-08-20 12:26:42.866 -05:00 [Information] Request finished in 197.8945ms 302 
+2019-08-20 12:26:42.878 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:42.922 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:43.120 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:43.135 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:43.150 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 256.6597ms
+2019-08-20 12:26:43.177 -05:00 [Information] Request finished in 292.0161ms 302 
+2019-08-20 12:26:43.187 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:43.266 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:43.416 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:43.431 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 225.984ms
+2019-08-20 12:26:43.469 -05:00 [Information] Request finished in 271.3603ms 302 
+2019-08-20 12:26:43.476 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:43.553 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:43.750 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:43.762 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:43.775 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 282.4608ms
+2019-08-20 12:26:43.790 -05:00 [Information] Request finished in 329.1943ms 302 
+2019-08-20 12:26:43.808 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:43.863 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:44.031 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:44.045 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 221.8339ms
+2019-08-20 12:26:44.071 -05:00 [Information] Request finished in 255.4943ms 302 
+2019-08-20 12:26:44.082 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:44.163 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:44.413 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:44.427 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:44.440 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 341.9219ms
+2019-08-20 12:26:44.460 -05:00 [Information] Request finished in 385.1015ms 302 
+2019-08-20 12:26:44.478 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:44.534 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:44.655 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:44.669 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 176.7552ms
+2019-08-20 12:26:44.687 -05:00 [Information] Request finished in 211.4909ms 302 
+2019-08-20 12:26:44.705 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:44.783 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:45.011 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:45.024 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:45.038 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 319.1429ms
+2019-08-20 12:26:45.066 -05:00 [Information] Request finished in 353.6285ms 302 
+2019-08-20 12:26:45.086 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:45.162 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:45.333 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:45.346 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 245.9486ms
+2019-08-20 12:26:45.367 -05:00 [Information] Request finished in 282.3393ms 302 
+2019-08-20 12:26:45.385 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:45.463 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:45.696 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:45.710 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:45.721 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 324.4619ms
+2019-08-20 12:26:45.746 -05:00 [Information] Request finished in 361.4289ms 302 
+2019-08-20 12:26:45.761 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:45.850 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:45.961 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:45.972 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 198.8369ms
+2019-08-20 12:26:45.987 -05:00 [Information] Request finished in 226.2362ms 302 
+2019-08-20 12:26:46.026 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:46.080 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:46.236 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:26:46.250 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:26:46.264 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 223.7268ms
+2019-08-20 12:26:46.292 -05:00 [Information] Request finished in 277.5617ms 302 
+2019-08-20 12:26:46.307 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:26:46.356 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:26:46.476 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:26:46.491 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 168.4458ms
+2019-08-20 12:26:46.524 -05:00 [Information] Request finished in 211.3943ms 302 
+2019-08-20 12:26:46.537 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:26:46.606 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:02.791 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:02.809 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:02.828 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 16271.6807ms
+2019-08-20 12:27:02.851 -05:00 [Information] Request finished in 16320.6822ms 302 
+2019-08-20 12:27:02.865 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:02.945 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:03.117 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:03.130 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 251.7654ms
+2019-08-20 12:27:03.149 -05:00 [Information] Request finished in 288.4798ms 302 
+2019-08-20 12:27:03.187 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:03.257 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:03.477 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:03.495 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:03.515 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 308.3569ms
+2019-08-20 12:27:03.555 -05:00 [Information] Request finished in 370.9102ms 302 
+2019-08-20 12:27:03.571 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:03.651 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:03.823 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:03.839 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 252.0636ms
+2019-08-20 12:27:03.886 -05:00 [Information] Request finished in 305.9015ms 302 
+2019-08-20 12:27:08.150 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:08.266 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:08.417 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:08.437 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 266.6788ms
+2019-08-20 12:27:08.487 -05:00 [Information] Request finished in 319.4616ms 302 
+2019-08-20 12:27:08.503 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:08.592 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:08.818 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:08.836 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:08.852 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 332.1777ms
+2019-08-20 12:27:08.890 -05:00 [Information] Request finished in 394.7252ms 302 
+2019-08-20 12:27:08.908 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:09.035 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:09.367 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:09.394 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 458.0741ms
+2019-08-20 12:27:09.421 -05:00 [Information] Request finished in 527.9262ms 302 
+2019-08-20 12:27:09.441 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:09.514 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:09.812 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:09.832 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:09.853 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 389.9061ms
+2019-08-20 12:27:09.882 -05:00 [Information] Request finished in 440.4424ms 302 
+2019-08-20 12:27:10.195 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:10.257 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:10.452 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:10.467 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 256.8321ms
+2019-08-20 12:27:10.486 -05:00 [Information] Request finished in 302.5786ms 302 
+2019-08-20 12:27:10.502 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:10.566 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:10.903 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:10.931 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:10.948 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 428.7365ms
+2019-08-20 12:27:10.968 -05:00 [Information] Request finished in 468.4979ms 302 
+2019-08-20 12:27:10.986 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:11.048 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:11.201 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:11.227 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 214.5904ms
+2019-08-20 12:27:11.269 -05:00 [Information] Request finished in 265.8927ms 302 
+2019-08-20 12:27:11.280 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:11.367 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:11.599 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:11.615 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:11.631 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 327.4385ms
+2019-08-20 12:27:11.665 -05:00 [Information] Request finished in 388.8833ms 302 
+2019-08-20 12:27:11.683 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:11.897 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:12.125 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:12.148 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 441.7273ms
+2019-08-20 12:27:12.187 -05:00 [Information] Request finished in 504.5754ms 302 
+2019-08-20 12:27:12.210 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:12.336 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:12.817 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:27:12.833 -05:00 [Information] Executing RedirectResult, redirecting to "/Home".
+2019-08-20 12:27:12.850 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 622.246ms
+2019-08-20 12:27:12.891 -05:00 [Information] Request finished in 683.623ms 302 
+2019-08-20 12:27:12.904 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Home  
+2019-08-20 12:27:12.995 -05:00 [Information] Executing action method "WEB.Controllers.HomeController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:27:13.186 -05:00 [Information] Executing RedirectResult, redirecting to "/Login/Index".
+2019-08-20 12:27:13.207 -05:00 [Information] Executed action "WEB.Controllers.HomeController.Index (WEB)" in 280.4913ms
+2019-08-20 12:27:13.234 -05:00 [Information] Request finished in 334.5735ms 302 
+2019-08-20 12:27:13.250 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/Login/Index  
+2019-08-20 12:27:13.342 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:28:55.102 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/  
+2019-08-20 12:28:55.102 -05:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:50338/  0
+2019-08-20 12:28:55.645 -05:00 [Information] Request finished in 646.7968ms 200 
+2019-08-20 12:28:57.746 -05:00 [Information] Executing action method "WEB.Controllers.LoginController.Index (WEB)" with arguments (null) - ModelState is Valid
+2019-08-20 12:29:29.850 -05:00 [Error] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2019-08-20 12:30:05.930 -05:00 [Information] Executing ViewResult, running view at path "/Views/Login/Index.cshtml".
+2019-08-20 12:30:07.305 -05:00 [Information] Executed action "WEB.Controllers.LoginController.Index (WEB)" in 69838.8183ms
+2019-08-20 12:30:07.435 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/css/util.css  
+2019-08-20 12:30:07.450 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/css/bootstrap.min.css  
+2019-08-20 12:30:07.455 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/js/main.js  
+2019-08-20 12:30:07.473 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/css/main.css  
+2019-08-20 12:30:07.487 -05:00 [Information] Request finished in 72580.6714ms 200 text/html; charset=utf-8
+2019-08-20 12:30:07.578 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/fonts/font-awesome-4.7.0/css/font-awesome.min.css  
+2019-08-20 12:30:07.700 -05:00 [Information] Sending file. Request path: '"/js/main.js"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\js\main.js"'
+2019-08-20 12:30:07.711 -05:00 [Information] Sending file. Request path: '"/fonts/font-awesome-4.7.0/css/font-awesome.min.css"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\fonts\font-awesome-4.7.0\css\font-awesome.min.css"'
+2019-08-20 12:30:07.769 -05:00 [Information] Sending file. Request path: '"/css/bootstrap.min.css"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\css\bootstrap.min.css"'
+2019-08-20 12:30:07.783 -05:00 [Information] Sending file. Request path: '"/css/util.css"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\css\util.css"'
+2019-08-20 12:30:09.150 -05:00 [Information] Sending file. Request path: '"/css/main.css"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\css\main.css"'
+2019-08-20 12:30:09.197 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/fonts/iconic/css/material-design-iconic-font.min.css  
+2019-08-20 12:30:09.213 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/js/core/jquery.min.js  
+2019-08-20 12:30:09.274 -05:00 [Information] Sending file. Request path: '"/js/core/jquery.min.js"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\js\core\jquery.min.js"'
+2019-08-20 12:30:09.286 -05:00 [Information] Sending file. Request path: '"/fonts/iconic/css/material-design-iconic-font.min.css"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\fonts\iconic\css\material-design-iconic-font.min.css"'
+2019-08-20 12:30:09.294 -05:00 [Information] Request finished in 1729.1334ms 200 application/javascript
+2019-08-20 12:30:09.719 -05:00 [Information] Request finished in 2110.2996ms 200 text/css
+2019-08-20 12:30:09.739 -05:00 [Information] Request finished in 388.6471ms 200 application/javascript
+2019-08-20 12:30:09.791 -05:00 [Information] Request finished in 2006.4018ms 200 text/css
+2019-08-20 12:30:09.854 -05:00 [Information] Request finished in 1599.2143ms 200 text/css
+2019-08-20 12:30:09.916 -05:00 [Information] Request finished in 839.2365ms 200 text/css
+2019-08-20 12:30:10.048 -05:00 [Information] Request finished in 1755.7399ms 200 text/css
+2019-08-20 12:30:10.056 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/images/login.jpg  
+2019-08-20 12:30:10.130 -05:00 [Information] Sending file. Request path: '"/images/login.jpg"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\images\login.jpg"'
+2019-08-20 12:30:10.246 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0  
+2019-08-20 12:30:10.317 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/fonts/poppins/Poppins-Medium.ttf  
+2019-08-20 12:30:10.377 -05:00 [Information] Sending file. Request path: '"/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2"'
+2019-08-20 12:30:10.432 -05:00 [Information] Sending file. Request path: '"/fonts/poppins/Poppins-Medium.ttf"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\fonts\poppins\Poppins-Medium.ttf"'
+2019-08-20 12:30:10.458 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/fonts/poppins/Poppins-Regular.ttf  
+2019-08-20 12:30:10.602 -05:00 [Information] Sending file. Request path: '"/fonts/poppins/Poppins-Regular.ttf"'. Physical path: '"D:\repo personal\docvalv2\DASys\WEB\wwwroot\fonts\poppins\Poppins-Regular.ttf"'
+2019-08-20 12:30:10.763 -05:00 [Information] Request finished in 367.4377ms 200 font/woff2
+2019-08-20 12:30:10.838 -05:00 [Information] Request finished in 426.8883ms 200 application/x-font-ttf
+2019-08-20 12:30:10.902 -05:00 [Information] Request finished in 670.7605ms 200 application/x-font-ttf
+2019-08-20 12:30:11.015 -05:00 [Information] Request finished in 1026.3285ms 200 image/jpeg
+2019-08-20 12:30:11.094 -05:00 [Information] Request starting HTTP/1.1 GET http://localhost:44352/images/icons/favicon.ico  
+2019-08-20 12:30:11.225 -05:00 [Information] Request finished in 113.1305ms 404 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Entidad;
 using Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Digitalizacion.Controllers
 {
@@ -15,7 +16,9 @@ namespace WEB.Areas.Digitalizacion.Controllers
         private readonly IColaborador _Colaborador;
         private readonly IVehiculo _Vehiculo;
         private readonly IEmpresa _Empresa;
-        public AprobadoController(IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa)
+        private readonly ILogger<AprobadoController> _logger;
+        
+        public AprobadoController(IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa, ILogger<AprobadoController> logger)
         {
             _Digitalizacion = Digitalizacion;
             _Colaborador = Colaborador;

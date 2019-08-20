@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Equipo.Controllers
 {
@@ -14,9 +15,11 @@ namespace WEB.Areas.Equipo.Controllers
     public class MarcaController : BaseController
     {
         private readonly IMarca _Marca;
-        public MarcaController(IServiceProvider serviceProvider,IMarca Marca) : base(serviceProvider)
+        private readonly ILogger<MarcaController> _logger;
+        public MarcaController(IServiceProvider serviceProvider,IMarca Marca, ILogger<MarcaController> logger) : base(serviceProvider)
         {
             _Marca = Marca;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -47,7 +50,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -69,7 +72,6 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -77,7 +79,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -98,7 +100,6 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -106,7 +107,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -122,7 +123,6 @@ namespace WEB.Areas.Equipo.Controllers
             {
                 var message = (objMarca.IdMarca == null) ? Constante.registroExitoso : Constante.actualizacionExitoso;
                 objMarca.IdMarca = (objMarca.IdMarca == null) ? "" : objMarca.IdMarca;
-                //objMarca.IdEmpresa = GetEmpresaPadre();
                 var response = _Marca.MantenimientoMarca(objMarca);
                 if (response == "1")
                 {
@@ -132,7 +132,6 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    // Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = Constante.registroError;
@@ -140,7 +139,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -177,6 +176,7 @@ namespace WEB.Areas.Equipo.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

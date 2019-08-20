@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Mantenimiento.Controllers
 {
@@ -14,9 +15,11 @@ namespace WEB.Areas.Mantenimiento.Controllers
     public class EntidadController : BaseController
     {
         private readonly IEntidad _Entidad;
-        public EntidadController(IServiceProvider serviceProvider, IEntidad Entidad):base(serviceProvider)
+        private readonly ILogger<EntidadController> _logger;
+        public EntidadController(IServiceProvider serviceProvider, IEntidad Entidad, ILogger<EntidadController> logger) :base(serviceProvider)
         {
             _Entidad = Entidad;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -53,7 +56,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);;
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -82,7 +85,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);;
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -110,7 +113,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);;
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -142,7 +145,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -179,6 +182,7 @@ namespace WEB.Areas.Mantenimiento.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

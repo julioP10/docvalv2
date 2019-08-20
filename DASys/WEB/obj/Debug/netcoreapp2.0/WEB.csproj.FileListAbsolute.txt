@@ -102,3 +102,28 @@ D:\DASYS\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.csproj.CopyComplete
 D:\DASYS\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.dll
 D:\DASYS\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.pdb
 D:\DASYS\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\WEB.deps.json
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\WEB.runtimeconfig.json
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\WEB.runtimeconfig.dev.json
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\WEB.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\WEB.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Acces.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Datos.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Dependencia.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Entidad.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Interfaces.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Utilis.dll
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Acces.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Dependencia.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Entidad.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Interfaces.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Utilis.pdb
+D:\repo personal\docvalv2\DASys\WEB\bin\Debug\netcoreapp2.0\Datos.pdb
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.csprojAssemblyReference.cache
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.csproj.CoreCompileInputs.cache
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.AssemblyInfoInputs.cache
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.AssemblyInfo.cs
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.csproj.CopyComplete
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.dll
+D:\repo personal\docvalv2\DASys\WEB\obj\Debug\netcoreapp2.0\WEB.pdb

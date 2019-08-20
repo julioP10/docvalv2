@@ -46,3 +46,15 @@ D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyI
 D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CopyComplete
 D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
 D:\DASYS\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb
+D:\repo personal\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.deps.json
+D:\repo personal\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.dll
+D:\repo personal\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Interfaces.pdb
+D:\repo personal\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Entidad.dll
+D:\repo personal\docvalv2\DASys\Interfaces\bin\Debug\netstandard2.0\Entidad.pdb
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csprojAssemblyReference.cache
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfoInputs.cache
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CopyComplete
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
+D:\repo personal\docvalv2\DASys\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb

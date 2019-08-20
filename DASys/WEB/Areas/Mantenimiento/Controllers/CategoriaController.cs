@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using Serilog;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Categorias.Mantenimiento.Controllers
 {
@@ -16,10 +17,12 @@ namespace WEB.Categorias.Mantenimiento.Controllers
     {
         private readonly ICategoria _Categoria;
         private readonly IConfiguration _configuration;
-        public CategoriaController(IConfiguration configuration,IServiceProvider serviceProvider, ICategoria Categoria):base(serviceProvider)
+        private readonly ILogger<CategoriaController> _logger;
+        public CategoriaController(IConfiguration configuration,IServiceProvider serviceProvider, ICategoria Categoria, ILogger<CategoriaController> logger) :base(serviceProvider)
         {
             _Categoria = Categoria;
             this._configuration = configuration;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -52,7 +55,7 @@ namespace WEB.Categorias.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -74,7 +77,6 @@ namespace WEB.Categorias.Mantenimiento.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -82,7 +84,7 @@ namespace WEB.Categorias.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -102,7 +104,6 @@ namespace WEB.Categorias.Mantenimiento.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -110,7 +111,7 @@ namespace WEB.Categorias.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -141,7 +142,6 @@ namespace WEB.Categorias.Mantenimiento.Controllers
                 }
                 else
                 {
-                    // Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = Constante.registroError;
@@ -149,7 +149,7 @@ namespace WEB.Categorias.Mantenimiento.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -186,6 +186,7 @@ namespace WEB.Categorias.Mantenimiento.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

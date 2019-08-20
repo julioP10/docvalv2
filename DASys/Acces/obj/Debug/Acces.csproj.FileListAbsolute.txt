@@ -228,3 +228,10 @@ D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CoreCompileInputs.cache
 D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CopyComplete
 D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.dll
 D:\DASYS\docvalv2\DASys\Acces\obj\Debug\Acces.pdb
+D:\repo personal\docvalv2\DASys\Acces\bin\Debug\Acces.dll
+D:\repo personal\docvalv2\DASys\Acces\bin\Debug\Acces.pdb
+D:\repo personal\docvalv2\DASys\Acces\obj\Debug\Acces.csprojAssemblyReference.cache
+D:\repo personal\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CoreCompileInputs.cache
+D:\repo personal\docvalv2\DASys\Acces\obj\Debug\Acces.csproj.CopyComplete
+D:\repo personal\docvalv2\DASys\Acces\obj\Debug\Acces.dll
+D:\repo personal\docvalv2\DASys\Acces\obj\Debug\Acces.pdb

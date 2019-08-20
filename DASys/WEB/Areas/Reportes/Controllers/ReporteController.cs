@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using OfficeOpenXml;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Reportes.Controllers
 {
@@ -17,12 +18,14 @@ namespace WEB.Areas.Reportes.Controllers
         private readonly IColaborador _colaborador;
         private readonly IDigitalizacion _digitalizacion;
         private readonly IReportes _reportes;
-        public ReporteController(IServiceProvider serviceProvider, IReportes reportes, IColaborador colaborador, IDigitalizacion digitalizacion, IEmpresa Empresa) : base(serviceProvider)
+        private readonly ILogger<ReporteController> _logger;
+        public ReporteController(IServiceProvider serviceProvider, IReportes reportes, IColaborador colaborador, IDigitalizacion digitalizacion, IEmpresa Empresa, ILogger<ReporteController> logger) : base(serviceProvider)
         {
             _digitalizacion = digitalizacion;
             _Empresa = Empresa;
             _colaborador = colaborador;
             _reportes = reportes;
+            _logger = logger;
         }
         public IActionResult Index()
         {
@@ -105,6 +108,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
                 jsonResponse.data = "";
             }
@@ -140,6 +144,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
                 jsonResponse.data = "";
             }
@@ -175,6 +180,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
                 jsonResponse.data = "";
             }
@@ -220,6 +226,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -272,6 +279,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(jsonResponse);
@@ -316,6 +324,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -359,6 +368,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -402,6 +412,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -441,6 +452,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -484,6 +496,7 @@ namespace WEB.Areas.Reportes.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

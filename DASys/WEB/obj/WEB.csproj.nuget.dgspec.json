@@ -1,37 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj": {}
+    "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj": {}
   },
   "projects": {
-    "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj",
         "projectName": "Acces",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj",
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -41,20 +41,20 @@
         "net461": {}
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
         "projectName": "Dependencia",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
-        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
-        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\obj\\",
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+        "packagesPath": "C:\\Users\\sigcomt\\.nuget\\packages\\",
+        "outputPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sigcomt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,11 +67,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -104,31 +104,31 @@
         }
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
-        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\obj\\",
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj",
+        "packagesPath": "C:\\Users\\sigcomt\\.nuget\\packages\\",
+        "outputPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sigcomt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -141,8 +141,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -171,20 +171,20 @@
         }
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
         "projectName": "Utilis",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -194,20 +194,20 @@
         "net461": {}
       }
     },
-    "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj": {
+    "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
+        "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj",
         "projectName": "WEB",
-        "projectPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
-        "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
-        "outputPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\obj\\",
+        "projectPath": "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj",
+        "packagesPath": "C:\\Users\\sigcomt\\.nuget\\packages\\",
+        "outputPath": "D:\\repo personal\\docvalv2\\DASys\\WEB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sigcomt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -220,20 +220,20 @@
         "frameworks": {
           "netcoreapp2.0": {
             "projectReferences": {
-              "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
               },
-              "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
-                "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj"
+              "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
+                "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj"
               }
             }
           }
@@ -278,6 +278,10 @@
             "Serilog": {
               "target": "Package",
               "version": "[2.7.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
             },
             "Serilog.Extensions.Logging": {
               "target": "Package",

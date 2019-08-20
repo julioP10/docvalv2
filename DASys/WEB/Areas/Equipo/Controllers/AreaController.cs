@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
-
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Equipo.Controllers
 {
@@ -14,9 +14,11 @@ namespace WEB.Areas.Equipo.Controllers
     public class AreaController : BaseController
     {
         private readonly IArea _area;
-        public AreaController(IServiceProvider serviceProvider, IArea area) : base(serviceProvider)
+        private readonly ILogger<AreaController> _logger;
+        public AreaController(IServiceProvider serviceProvider, IArea area, ILogger<AreaController> logger) : base(serviceProvider)
         {
             _area = area;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -47,7 +49,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -69,7 +71,6 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -77,7 +78,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -98,7 +99,6 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    //Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = "Error en al consulta";
@@ -106,7 +106,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -132,7 +132,7 @@ namespace WEB.Areas.Equipo.Controllers
                 }
                 else
                 {
-                    // Log.Error(response.Content.ToString());
+                    _logger.LogError(response.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = Constante.registroError;
@@ -140,7 +140,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                // Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -177,6 +177,7 @@ namespace WEB.Areas.Equipo.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
