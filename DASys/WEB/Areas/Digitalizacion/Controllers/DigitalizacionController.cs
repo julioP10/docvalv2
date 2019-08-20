@@ -10,6 +10,7 @@ using Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using Utilis;
@@ -28,7 +29,8 @@ namespace WEB.Areas.Digitalizacion.Controllers
         private readonly IMaquinaria _Maquinaria;
         private readonly IEmpresa _Empresa;
         private readonly IUsuario _Usuario;
-        public DigitalizacionController(IServiceProvider serviceProvider, IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa, IDocumentoAdjunto DocumentoAdjunto, IUsuario Usuario, IMaquinaria Maquinaria) : base(serviceProvider)
+        private readonly ILogger<DigitalizacionController> _logger;
+        public DigitalizacionController(IServiceProvider serviceProvider, IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa, IDocumentoAdjunto DocumentoAdjunto, IUsuario Usuario, IMaquinaria Maquinaria, ILogger<DigitalizacionController> logger) : base(serviceProvider)
         {
             _Digitalizacion = Digitalizacion;
             _Colaborador = Colaborador;
@@ -37,6 +39,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             _DocumentoAdjunto = DocumentoAdjunto;
             _Usuario = Usuario;
             _Maquinaria = Maquinaria;
+            _logger = logger;
         }
         //[HttpPost]
         public class EmpresaTemp {
@@ -224,6 +227,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message.ToString();
                 jsonResponse.IsValid = false;
                 jsonResponse.Type = Constante.Warning;
@@ -279,6 +283,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -333,7 +338,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
-                // Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -522,6 +527,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -575,7 +581,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
-                // Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -770,6 +776,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -823,7 +830,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
-                // Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -1013,6 +1020,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
@@ -1058,7 +1066,6 @@ namespace WEB.Areas.Digitalizacion.Controllers
                 }
                 else
                 {
-                    // Log.Error(response.Content.ToString());
                     jsonResponseDto.Type = Constante.Warning.ToLower();
                     jsonResponseDto.IsValid = false;
                     jsonResponseDto.Mensaje = Constante.registroError;
@@ -1066,7 +1073,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
-                // Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -1270,7 +1277,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
-
+                _logger.LogError(ex.Message);
                 jsonResponseDto.IsValid = true;
                 jsonResponseDto.Type = Constante.Success;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -1299,6 +1306,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
                 return View("DocumentosAdjuntos");
             }
@@ -1331,6 +1339,7 @@ namespace WEB.Areas.Digitalizacion.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
                 jsonResponse.IsValid = true;
                 jsonResponse.Type = Constante.Success;

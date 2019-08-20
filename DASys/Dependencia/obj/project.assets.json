@@ -267,23 +267,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10 1809\\.nuget\\packages\\": {},
+    "C:\\Users\\sigcomt\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+      "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
       "projectName": "Dependencia",
-      "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
-      "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
-      "outputPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\obj\\",
+      "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj",
+      "packagesPath": "C:\\Users\\sigcomt\\.nuget\\packages\\",
+      "outputPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sigcomt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -296,11 +296,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Datos\\Datos.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Datos\\Datos.csproj"
             },
-            "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
             }
           }
         }

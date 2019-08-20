@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Http;
 using Utilis;
 using Microsoft.Extensions.Logging;
 using Acces;
+using Serilog;
 //using DataAccessContext;
 
 namespace WEB
@@ -29,6 +30,7 @@ namespace WEB
         public static string  _conection = "";
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
 
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
@@ -171,7 +173,10 @@ namespace WEB
                     name: "default",
                     template: "{controller=Login}/{action=Index}/{id?}");
             });
-       
+
+            // logging
+            loggerFactory.AddSerilog();
+
             //app.AddCustomErrorHandler();
         }
     

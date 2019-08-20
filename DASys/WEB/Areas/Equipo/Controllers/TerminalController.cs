@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Equipo.Controllers
 {
@@ -14,9 +15,11 @@ namespace WEB.Areas.Equipo.Controllers
     public class TerminalController : BaseController
     {
         private readonly ITerminal _Terminal;
-        public TerminalController(IServiceProvider serviceProvider,ITerminal Terminal):base(serviceProvider)
+        private readonly ILogger<TerminalController> _logger;
+        public TerminalController(IServiceProvider serviceProvider,ITerminal Terminal, ILogger<TerminalController> logger) :base(serviceProvider)
         {
             _Terminal = Terminal;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -48,7 +51,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -81,7 +84,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -109,7 +112,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -148,7 +151,7 @@ namespace WEB.Areas.Equipo.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -185,7 +188,7 @@ namespace WEB.Areas.Equipo.Controllers
 
             catch (Exception ex)
             {
-                Log.Error(ex.Message.ToString());
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

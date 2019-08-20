@@ -3175,6 +3175,22 @@
           "lib/netstandard1.3/Serilog.dll": {}
         }
       },
+      "Serilog.AspNetCore/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Serilog": "2.5.0",
+          "Serilog.Extensions.Logging": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {}
+        }
+      },
       "Serilog.Extensions.Logging/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -8711,6 +8727,19 @@
         "serilog.nuspec"
       ]
     },
+    "Serilog.AspNetCore/2.1.1": {
+      "sha512": "euuzaDEF8RuTszbqZnYYOm15bGKm0ID3Vaj++sDhmxeL79a8yRemhv2Y8knjvqoOatIpN7Cqd6Jma0A+Pk+V7g==",
+      "type": "package",
+      "path": "serilog.aspnetcore/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Serilog.AspNetCore.dll",
+        "lib/netstandard2.0/Serilog.AspNetCore.xml",
+        "serilog.aspnetcore.2.1.1.nupkg.sha512",
+        "serilog.aspnetcore.nuspec"
+      ]
+    },
     "Serilog.Extensions.Logging/2.0.2": {
       "sha512": "PYAkzUn/VV16Es7U06BfEhNZEltnYWu0WFCM4d2lLY/dvlA7xMwFXBuGRxR0XvEBPoOxPorjhFLy9txwiMO6rg==",
       "type": "package",
@@ -13742,6 +13771,7 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.4",
       "Serilog >= 2.7.1",
+      "Serilog.AspNetCore >= 2.1.1",
       "Serilog.Extensions.Logging >= 2.0.2",
       "Serilog.Settings.Configuration >= 3.0.1",
       "Serilog.Sinks.File >= 4.0.0",
@@ -13750,23 +13780,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10 1809\\.nuget\\packages\\": {},
+    "C:\\Users\\sigcomt\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
+      "projectUniqueName": "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj",
       "projectName": "WEB",
-      "projectPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\WEB.csproj",
-      "packagesPath": "C:\\Users\\Win10 1809\\.nuget\\packages\\",
-      "outputPath": "D:\\DASYS\\docvalv2\\DASys\\WEB\\obj\\",
+      "projectPath": "D:\\repo personal\\docvalv2\\DASys\\WEB\\WEB.csproj",
+      "packagesPath": "C:\\Users\\sigcomt\\.nuget\\packages\\",
+      "outputPath": "D:\\repo personal\\docvalv2\\DASys\\WEB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Win10 1809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sigcomt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13779,20 +13809,20 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Acces\\Acces.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Acces\\Acces.csproj"
             },
-            "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Dependencia\\Dependencia.csproj"
             },
-            "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Entidad\\Entidad.csproj"
             },
-            "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Interfaces\\Interfaces.csproj"
             },
-            "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
-              "projectPath": "D:\\DASYS\\docvalv2\\DASys\\Utilis\\Utilis.csproj"
+            "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj": {
+              "projectPath": "D:\\repo personal\\docvalv2\\DASys\\Utilis\\Utilis.csproj"
             }
           }
         }
@@ -13837,6 +13867,10 @@
           "Serilog": {
             "target": "Package",
             "version": "[2.7.1, )"
+          },
+          "Serilog.AspNetCore": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Serilog.Extensions.Logging": {
             "target": "Package",

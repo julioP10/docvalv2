@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using WEB.Models;
 using Utilis;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Controllers
 {
@@ -23,33 +24,48 @@ namespace WEB.Controllers
         private readonly IOpcion _Opcion;
         private readonly IEmpresa _Empresa;
         private readonly IServiceProvider _serviceProvider;
-        public LoginController(IUsuario Usuario, IServiceProvider serviceProvider, IModulo Modulo, IOpcion Opcion,IEmpresa Empresa) : base(serviceProvider)
+
+        private readonly ILogger<LoginController> _logger;
+
+        public LoginController(IUsuario Usuario, IServiceProvider serviceProvider, IModulo Modulo, IOpcion Opcion, IEmpresa Empresa, ILogger<LoginController> logger) : base(serviceProvider)
         {
-            _Usuario = Usuario;
-            _serviceProvider = serviceProvider;
-            _Modulo = Modulo;
-            _Opcion = Opcion;
-            _Empresa = Empresa;
+            this._logger = logger;
+            this._Usuario = Usuario;
+            this._serviceProvider = serviceProvider;
+            this._Modulo = Modulo;
+            this._Opcion = Opcion;
+            this._Empresa = Empresa;
+
         }
 
-        
+
         public IActionResult Index()
         {
+
             //Comprobar si hay registros de los principales en el sistema
-            var ok = Utils.IniciarSistema();
-            Log.Information("ok");
-            if (string.IsNullOrWhiteSpace(GetUsuarioActual()))
+            try
             {
-                var modelo = new UsuarioLoginDto
+                var ok = Utils.IniciarSistema();
+                _logger.LogInformation("get login initial");
+                if (string.IsNullOrWhiteSpace(GetUsuarioActual()))
                 {
-                    Usuarios = "",
-                    Password = ""
-                };
-                return View(modelo);
+                    var modelo = new UsuarioLoginDto
+                    {
+                        Usuarios = "",
+                        Password = ""
+                    };
+                    return View(modelo);
+                }
+                else
+                {
+                    return Redirect("/Home");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return Redirect("/Home");
+                _logger.LogError(ex.Message);
+                ViewBag.Error = "No hay conexion con el servidor de datos :(";
+                return View();
             }
         }
 
@@ -60,7 +76,7 @@ namespace WEB.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public  IActionResult UserLogin([FromForm] UsuarioConsultaDto objUsuarioConsultaDto)
+        public IActionResult UserLogin([FromForm] UsuarioConsultaDto objUsuarioConsultaDto)
         {
             objUsuarioConsultaDto.Password = Encriptador.Encriptar(objUsuarioConsultaDto.Password);
             if (string.IsNullOrWhiteSpace(objUsuarioConsultaDto.Password))
@@ -68,30 +84,38 @@ namespace WEB.Controllers
                 ViewBag.Error = "Ingrese Usuario o Contraseña";
                 return View("Index");
             }
-            HttpContext.Session.SetString("Usu",objUsuarioConsultaDto.Usuarios);
+            HttpContext.Session.SetString("Usu", objUsuarioConsultaDto.Usuarios);
             HttpContext.Session.SetString("Pas", objUsuarioConsultaDto.Password);
             try
             {
                 objUsuarioConsultaDto = _Usuario.UsuarioLogin(objUsuarioConsultaDto);
-                if (string.IsNullOrEmpty(objUsuarioConsultaDto.Correo)) {
+                if (string.IsNullOrEmpty(objUsuarioConsultaDto.Correo))
+                {
                     ViewBag.Error = "Usuario o Contraseña Incorrecto";
                     UsuarioLoginDto objUsuarioLoginDto = new UsuarioLoginDto();
                     objUsuarioLoginDto.Tipo = "Login";
                     return View("Index", objUsuarioLoginDto);
                 }
-     
+                if (objUsuarioConsultaDto.IdEstado != "ES0201")
+                {
+                    ViewBag.Error = "Usuario no activo, comuníquece con su administrador";
+                    UsuarioLoginDto objUsuarioLoginDto = new UsuarioLoginDto();
+                    objUsuarioLoginDto.Tipo = "Login";
+                    return View("Index", objUsuarioLoginDto);
+                }
+
 
                 GenerateTicketAuthentication(objUsuarioConsultaDto);
-                Log.Information("INICIO");
+                _logger.LogInformation("INICIO");
                 HttpContext.Session.SetString("_TipoEmpresa", GetPerfil());
-                // HttpContext.Session.SetString("_TipoEmpresa",objUsuarioConsultaDto.TipoEmpresa);
                 return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 ViewBag.Error = "Usuario o Contraseña Incorrecto";
                 return View("Index");
+
             }
 
         }
@@ -108,7 +132,7 @@ namespace WEB.Controllers
                 objUsuarioConsultaDto = _Usuario.UsuarioRecuperar(objUsuarioConsultaDto);
                 if (string.IsNullOrEmpty(objUsuarioConsultaDto.Correo))
                 {
-                
+
                     ViewBag.Error = "Usuario o correo no registrado";
                     return View("Index");
                 }
@@ -125,7 +149,7 @@ namespace WEB.Controllers
                     return View("Index", objUsuarioLoginDto);
                 }
                 objUsuarioConsultaDto.Password = Encriptador.Desencriptar(objUsuarioConsultaDto.Password);
-                EnviarCorreoUsuarioRecuperado(parametrosCorreoDto,objUsuarioConsultaDto);
+                EnviarCorreoUsuarioRecuperado(parametrosCorreoDto, objUsuarioConsultaDto);
                 ViewBag.Success = "Se ha recuperado su usuario, revise su correo personal";
                 UsuarioLoginDto objUsuarioLoginDtos = new UsuarioLoginDto();
                 objUsuarioLoginDtos.Tipo = "Recuperar";
@@ -135,7 +159,7 @@ namespace WEB.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 ViewBag.Error = "Usuario o Contraseña Incorrecto";
                 return View("Index");
             }
@@ -163,8 +187,8 @@ namespace WEB.Controllers
             }
             catch (Exception ex)
             {
-
-                return Json(new {ok=false });
+                _logger.LogError(ex.Message);
+                return Json(new { ok = false });
             }
 
         }
@@ -188,12 +212,12 @@ namespace WEB.Controllers
             //    jsonResponse.Mensaje = Constante.IntenteloMasTarde;
             //}
 
-            return Json(new{ });
+            return Json(new { });
         }
 
 
         #region Metodos Privados
-        private void GenerateTicketAuthentication(UsuarioConsultaDto  usuarioDto)
+        private void GenerateTicketAuthentication(UsuarioConsultaDto usuarioDto)
 
         {
             HttpContext.Session.SetObject(Constante.UsuarioSesionKey, usuarioDto);
@@ -206,7 +230,7 @@ namespace WEB.Controllers
             claims.Add(new Claim(ClaimTypes.Name, usuarioDto.Usuarios));
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var authProperties = new AuthenticationProperties();
-             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+            HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
         }
 
         public void MenuActual(UsuarioPermisoDto objUsuarioPermisoDto)

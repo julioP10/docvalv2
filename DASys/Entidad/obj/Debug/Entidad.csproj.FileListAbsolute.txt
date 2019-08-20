@@ -22,3 +22,9 @@ D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.csprojAssemblyReference.cache
 D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.dll
 D:\DASYS\docvalv2\DASys\Entidad\obj\Debug\Entidad.pdb
+D:\repo personal\docvalv2\DASys\Entidad\bin\Debug\Entidad.dll
+D:\repo personal\docvalv2\DASys\Entidad\bin\Debug\Entidad.pdb
+D:\repo personal\docvalv2\DASys\Entidad\obj\Debug\Entidad.csprojAssemblyReference.cache
+D:\repo personal\docvalv2\DASys\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+D:\repo personal\docvalv2\DASys\Entidad\obj\Debug\Entidad.dll
+D:\repo personal\docvalv2\DASys\Entidad\obj\Debug\Entidad.pdb

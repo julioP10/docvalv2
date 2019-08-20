@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WEB.Controllers;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Trasporte.Controllers
 {
@@ -14,9 +15,11 @@ namespace WEB.Areas.Trasporte.Controllers
     public class MarcaController : BaseController
     {
         private readonly IMarca _Marca;
-        public MarcaController(IServiceProvider serviceProvider,IMarca Marca) : base(serviceProvider)
+        private readonly ILogger<MarcaController> _logger;
+        public MarcaController(IServiceProvider serviceProvider,IMarca Marca, ILogger<MarcaController> logger) : base(serviceProvider)
         {
             _Marca = Marca;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -47,7 +50,7 @@ namespace WEB.Areas.Trasporte.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -77,7 +80,7 @@ namespace WEB.Areas.Trasporte.Controllers
             }
             catch (Exception ex)
             {
-                //Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -106,7 +109,7 @@ namespace WEB.Areas.Trasporte.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -140,7 +143,7 @@ namespace WEB.Areas.Trasporte.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -177,6 +180,7 @@ namespace WEB.Areas.Trasporte.Controllers
 
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);

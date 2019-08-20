@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Entidad;
 using Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Digitalizacion.Controllers
 {
@@ -15,12 +16,14 @@ namespace WEB.Areas.Digitalizacion.Controllers
         private readonly IColaborador _Colaborador;
         private readonly IVehiculo _Vehiculo;
         private readonly IEmpresa _Empresa;
-        public RegistroController(IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa)
+        private readonly ILogger<RegistroController> _logger;
+        public RegistroController(IDigitalizacion Digitalizacion, IColaborador Colaborador, IVehiculo Vehiculo, IEmpresa Empresa, ILogger<RegistroController> logger)
         {
             _Digitalizacion = Digitalizacion;
             _Colaborador = Colaborador;
             _Vehiculo = Vehiculo;
             _Empresa = Empresa;
+            _logger = logger;
         }
         public IActionResult Index()
         {

@@ -52,3 +52,20 @@ D:\DASYS\docvalv2\DASys\Utilis\obj\Debug\Utilis.csproj.CoreCompileInputs.cache
 D:\DASYS\docvalv2\DASys\Utilis\obj\Debug\Utilis.csproj.CopyComplete
 D:\DASYS\docvalv2\DASys\Utilis\obj\Debug\Utilis.dll
 D:\DASYS\docvalv2\DASys\Utilis\obj\Debug\Utilis.pdb
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Utilis.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Utilis.pdb
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Datos.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Entidad.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Interfaces.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Acces.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\netstandard.dll
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Datos.pdb
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Entidad.pdb
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Interfaces.pdb
+D:\repo personal\docvalv2\DASys\Utilis\bin\Debug\Acces.pdb
+D:\repo personal\docvalv2\DASys\Utilis\obj\Debug\Utilis.csprojAssemblyReference.cache
+D:\repo personal\docvalv2\DASys\Utilis\obj\Debug\Utilis.csproj.CoreCompileInputs.cache
+D:\repo personal\docvalv2\DASys\Utilis\obj\Debug\Utilis.csproj.CopyComplete
+D:\repo personal\docvalv2\DASys\Utilis\obj\Debug\Utilis.dll
+D:\repo personal\docvalv2\DASys\Utilis\obj\Debug\Utilis.pdb

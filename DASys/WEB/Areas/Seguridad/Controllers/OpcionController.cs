@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WEB.Areas.Seguridad.Controllers
 {
@@ -13,9 +14,11 @@ namespace WEB.Areas.Seguridad.Controllers
     public class OpcionController : Controller
     {
         private readonly IOpcion _Opcion;
-        public OpcionController(IOpcion Opcion)
+        private readonly ILogger<OpcionController> _logger;
+        public OpcionController(IOpcion Opcion, ILogger<OpcionController> logger)
         {
             _Opcion = Opcion;
+            _logger = logger;
         }
         #region Metodos publicos
         #region Vistas
@@ -46,7 +49,7 @@ namespace WEB.Areas.Seguridad.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -76,7 +79,7 @@ namespace WEB.Areas.Seguridad.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -105,7 +108,7 @@ namespace WEB.Areas.Seguridad.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -144,7 +147,7 @@ namespace WEB.Areas.Seguridad.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                _logger.LogError(ex.Message);
                 jsonResponseDto.Type = Constante.Warning.ToLower();
                 jsonResponseDto.IsValid = false;
                 jsonResponseDto.Mensaje = ex.Message.ToString();
@@ -181,7 +184,7 @@ namespace WEB.Areas.Seguridad.Controllers
 
             catch (Exception ex)
             {
-                Log.Error(ex.Message.ToString());
+                _logger.LogError(ex.Message);
                 jsonResponse.Mensaje = ex.Message;
             }
             return Json(dataTableModel);
